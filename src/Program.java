@@ -7,24 +7,26 @@ public class Program {
         Scanner input = new Scanner(System.in);
         double value;
 
-        System.out.printf("Enter account number: ");
-        String number = input.next();
+        System.out.print("Enter account number: ");
+        String number = input.nextLine();
 
-        System.out.printf("Enter account holder: ");
+        System.out.print("Enter account holder: ");
         String bankAccountOwner = input.nextLine();
+
 
         BankAccount account = new BankAccount(number, bankAccountOwner);
 
-        System.out.printf("Is there an initial deposit (y/n)? ");
+        System.out.print("Is there an initial deposit (y/n)? ");
         String answer = input.next();
 
         if (answer.toLowerCase().equals("y")) {
-            
-            System.out.printf("Enter initial deposit value: ");
+
+            System.out.print("Enter initial deposit value: ");
             value = input.nextDouble();
             account.toDeposit(value);
         }
 
+        System.out.println(account);
 
     }
 }
