@@ -41,4 +41,12 @@ public class BankAccount {
     public void toWithdraw(double value) {
         balance -= value - 5;
     }
+
+    @Override
+    public String toString() {
+        return "Account " + number  + ", " +
+                "Holder: " + bankAccountOwner + ", " +
+                "Balance: % " + String.format("%.2f", balance);
+
+    }
 }
