@@ -10,6 +10,7 @@ public class BankAccount {
         this.bankAccountOwner = bankAccountOwner;
     }
 
+
     public String getNumber() {
         return number;
     }
