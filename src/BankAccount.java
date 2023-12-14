@@ -5,12 +5,13 @@ public class BankAccount {
 
     private double balance;
 
-    public String getNumber() {
-        return number;
+    public BankAccount(String number, String bankAccountOwner) {
+        this.number = number;
+        this.bankAccountOwner = bankAccountOwner;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public String getNumber() {
+        return number;
     }
 
     public String getBankAccountOwner() {
@@ -33,11 +34,11 @@ public class BankAccount {
         }
     }
 
+    // A $5.00 fee is charged for each withdrawal
+    /* The account may have a negative balance if the balance is not
+    enough to make the withdrawal and/or pay the fee*/
+
     public void toWithdraw(double value) {
-        if (balance >= value) {
-            balance -= value;
-        } else {
-            throw new IllegalArgumentException("Value must be lower or equal to the balance");
-        }
+        balance -= value - 5;
     }
 }
