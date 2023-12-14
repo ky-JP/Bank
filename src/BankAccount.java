@@ -40,7 +40,8 @@ public class BankAccount {
     enough to make the withdrawal and/or pay the fee*/
 
     public void toWithdraw(double value) {
-        balance -= value - 5;
+        balance -= value;
+        balance -= 5;
     }
 
     @Override
