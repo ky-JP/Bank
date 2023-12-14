@@ -34,7 +34,7 @@ public class BankAccount {
         }
     }
 
-    // A $5.00 fee is charged for each withdrawal
+    // A $5.00 fee is charged for each withdraw
     /* The account may have a negative balance if the balance is not
     enough to make the withdrawal and/or pay the fee*/
 
