@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
 
+        Locale.setDefault(Locale.US);
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter account number: ");
@@ -48,6 +49,8 @@ public class Program {
 
         System.out.println("Updated account data: ");
         System.out.println(account);
+
+        input.close();
 
     }
 }
