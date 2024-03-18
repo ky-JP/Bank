@@ -43,6 +43,13 @@ public class BankAccount {
         balance -= value;
         balance -= 5;
     }
+    
+    public void transferMoney(BankAccount account, double value) {
+        if (balance >= value) {
+            account.toDeposit(value);
+            balance -= value;
+        }
+    }
 
     @Override
     public String toString() {
